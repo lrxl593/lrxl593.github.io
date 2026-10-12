@@ -1,0 +1,16 @@
+/* Static hosting compatibility; the original theme remains in style.css. */
+.tabcontent:not(.active) { display: none; }
+.js-filter-container > ul[hidden] { display: none !important; }
+.nav__item a:focus-visible, .filter__link:focus-visible {
+  outline: 2px solid #304cfd;
+  outline-offset: 4px;
+}
+@media (max-width: 580px) {
+  .header__photo { max-width: 100%; }
+  .header__base-info, .header__contact { min-width: 0; }
+  .header__contact li, .timeline__description { overflow-wrap: anywhere; }
+  .header__contact pre { white-space: pre-wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
